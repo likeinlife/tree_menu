@@ -5,10 +5,11 @@
     <title>Menu title page</title>
     {% load static %}
     <link rel="stylesheet" href="{% static "css/style.css" %}">
+<script src="https://unpkg.com/htmx.org@2.0.1" integrity="sha384-QWGpdj554B4ETpJJC9z+ZHJcA/i59TyjxEPXiiUgN2WmTyV5OEZWCD6gQhgkdpB/" crossorigin="anonymous"></script>
 </head>
 <body>
     {% load draw_menu %}
 
-    {% draw_menu 'main-menu' %}
+    {% draw_menu 'main' %}
 </body>
 </html>

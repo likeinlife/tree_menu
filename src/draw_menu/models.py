@@ -6,6 +6,7 @@ from django.utils.translation import gettext as _
 class Menu(models.Model):
     name = models.CharField(_("menu_name"), max_length=100, unique=True)
     slug = models.CharField(_("slug"), max_length=250, blank=True, editable=False)
+    url = models.CharField(_("url"), max_length=250)
     parent = models.ForeignKey(
         "self",
         verbose_name=_("parent_menu_item"),

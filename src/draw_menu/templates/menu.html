@@ -1,5 +1,13 @@
 <ul class="menu">
     {% for menu_item in menu.children.all %}
-        <li class="menu-item"><a href="{% url 'home' path=menu_item.slug %}">{{ menu_item.name }}</a></li>
+        <li class="menu-item">
+            <a 
+                href="{{ menu_item.url }}" 
+                hx-get="{% url 'htmx_submenu' menu_item.slug %}" 
+                hx-trigger="mouseenter once"
+                hx-swap="afterend">
+                {{ menu_item.name }}
+            </a>
+        </li>
     {% endfor %}
 </ul>

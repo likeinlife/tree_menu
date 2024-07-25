@@ -1,0 +1,13 @@
+<ul class="submenu">
+    {% for submenu_item in submenu.children.all %}
+        <li class="submenu-item">
+            <a 
+                href="{{ submenu_item.url }}" 
+                hx-get="{% url 'htmx_submenu' submenu_item.slug %}" 
+                hx-trigger="mouseenter once"
+                hx-swap="afterend">
+                {{ submenu_item.name }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
