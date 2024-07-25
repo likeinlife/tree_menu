@@ -16,7 +16,7 @@ Alternative:
 pip install -r requirements.lock
 ```
 
-2. Prepare. Migrate, load data
+2. Prepare. Create `.env`, migrate, load data
 
 ```shell
 make prepare
