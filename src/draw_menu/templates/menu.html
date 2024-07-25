@@ -1,0 +1,5 @@
+<ul class="menu">
+    {% for menu_item in menu.children.all %}
+        <li class="menu-item"><a href="{% url 'home' path=menu_item.slug %}">{{ menu_item.name }}</a></li>
+    {% endfor %}
+</ul>
